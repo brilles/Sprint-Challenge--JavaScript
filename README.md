@@ -18,7 +18,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 ## Description
 
-You will notice there are several JavaScript files being brought into the index.html file.  Each of those files contain JavaScript problems you need to solve.  If you get stuck on something, skip over it and come back to it later.
+You will notice there are several JavaScript files being brought into the index.html file. Each of those files contain JavaScript problems you need to solve. If you get stuck on something, skip over it and come back to it later.
 
 In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.
 
@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is data mutation. .forEach mutates the original array while .map does not(it creates a new one). Because of this, .forEach does not follow the traditional functional programming paradigm and can have an increased probabilty of side effects/bugs.
+
 2. What is the difference between a function and a method?
+
+While a function is a stand alone block of code with its own scope, a method is the same thing but inside of a object. The method is simply a special function bound to the object's scope that it lives in.
 
 3. What is closure?
 
+Closure is the concept of nested functions having access to their parent scope(passing variables down). As functions are nested within each other, they have access to outside variables. If a variable is not defined in a functions scope, it will look outward its scope for context.
+
 4. Describe the four rules of the 'this' keyword.
 
+The 4 rules if the 'this' keyword:
+1) Window/Global binding: when in global scope, the 'this' value will be that of the console/ window object.
+2) Implicit/Automatic Binding: When a function is called with a dot, the object before the dot is 'this'.
+3) Explicit Binding: when .call or .apply is used, 'this' is explicitly defined. By expicitly calling objects with a new context using .call and .apply, we can overtide what the constuctor objects get set to.
+4) New Binding: When a constructor function is used, 'this' refers to the specific instance of the object that is made by the constructor.
+
 5. Why do we need super() in an extended class?
+
+super() is needed in an extended class because it is used to tell the parent's constuctor to be aware of the child's attributes (and the other way around). The super() function abstracts away the Object.create(this, Class) syntax. Using extends and super together make it very easy to make object inheritance stuctures quickly.
 
 ## Project Set up
 
@@ -46,17 +60,16 @@ Follow these steps to set up and work on your project:
 - [ ] Add PM as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
-
+- [ ] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
@@ -65,20 +78,28 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+
+Test your knowledge of objects and arrays.
+
+- [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started. Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+
+This challenge takes a look at callbacks and closures as well as scope.
+
+- [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
+
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+
+- [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Classes
+
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+
+- [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
