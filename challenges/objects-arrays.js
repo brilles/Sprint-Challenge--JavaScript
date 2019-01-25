@@ -222,9 +222,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(function(i) {
-  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
-});
+zooAnimals.forEach(i =>
+  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`)
+);
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -249,11 +249,13 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(total, currentVal) {
-  return total + currentVal.population;
-}, 0);
+// const populationTotal = zooAnimals.reduce(function(total, currentVal) {
+//   return total + currentVal.population;
+// }, 0);
+// console.log(populationTotal);
+const reducer = (total, currentVal) => total + currentVal.population;
+const populationTotal = zooAnimals.reduce(reducer, 0);
 console.log(populationTotal);
-
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
